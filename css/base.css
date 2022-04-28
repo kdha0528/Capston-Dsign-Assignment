@@ -223,6 +223,14 @@ input {
     appearance: none;
 }
 
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
 body {}
 
 /* margin */
@@ -381,8 +389,65 @@ body {}
     line-height: 0px !important;
 }
 
+.scroll_box::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll_box::-webkit-scrollbar-track {
+    background-color: #000;
+}
+
+.scroll_box::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.scroll_box::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+}
+
+input[type="checkbox"]:checked + label:after {
+    background: url(/PETC/assets/images/common/bg_checkbox_on.png) center /100% no-repeat;
+}
+
+input[type="checkbox"] + label {
+    position: relative;
+    padding-left: 32px;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label span {
+    color: #6F6F6F;
+    margin-right: 3px;
+}
+
+input[type="checkbox"] + label:after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 24px;
+    height: 24px;
+    background: url(/PETC/assets/images/common/bg_checkbox_off.png) center /100% no-repeat;
+}
+
 input[type="radio"] {
     appearance: none;
+}
+input[type="radio"]:checked::-ms-check {
+	border: none;
+}
+input[type="radio"]:checked + label:after {
+    background: url(/PETC/assets/images/common/bg_radio_on.png) center /100% no-repeat;
 }
 
 input[type="radio"] + label {
@@ -397,6 +462,38 @@ input[type="radio"] + label {
 input[type="radio"] + label span {
     color: #6F6F6F;
     margin-right: 3px;
+}
+
+input[type="radio"] + label:after {
+    content: '';
+    position: absolute;
+    top: 55%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 24px;
+    height: 24px;
+    background: url(/PETC/assets/images/common/bg_radio_off.png) center /100% no-repeat;
+}
+
+select{
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    text-indent: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: url(/PETC/assets/images/common/select_arrow.png) center right 4px no-repeat;
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select option{
+    background: rgba(0,0,0,0.9);
+    text-indent: 10px;
 }
 
 #content{
@@ -429,6 +526,10 @@ input[type="radio"] + label span {
 
 .w_block {
     display: block;
+}
+
+.prox{
+    font-family: "ProximaNova";
 }
 
 @media (max-width:1230px) {

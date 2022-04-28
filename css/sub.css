@@ -370,6 +370,93 @@ input[type="date"]:after {
   color: #fff;
 }
 
+/* footer 영역 */
+.footer_contents {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer_contents .inner {
+  padding: 0em 6em 3em;
+}
+
+.footer_contents .customer_area {
+  position: absolute;
+  top: 50%;
+  right: 30em;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.footer_contents .customer_area dl dt {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.footer_contents .customer_area dl dd {
+  font-size: 2.4em;
+  font-weight: 700;
+  margin-top: 9px;
+  color: #fff;
+}
+
+.footer_contents .customer_area dl a {
+  margin-top: 1.3em;
+  display: inline-block;
+  font-size: 1.4em;
+  color: #A6A6A6;
+  padding-right: 1.4em;
+  background: url(/PETC/assets/images/sub/arrow_right_02.svg) center right no-repeat;
+}
+
+.footer_contents .link_area {
+  padding: 3em 0;
+}
+
+.footer_contents .link_area a {
+  display: inline-block;
+  color: #A6A6A6;
+  font-size: 1.5em;
+  margin-right: 2em;
+}
+
+.footer_contents .link_area a.on {
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer_contents .logo_area {
+  width: 89px;
+  margin-bottom: 1.8em;
+}
+
+.footer_contents .info_area ul li {
+  display: inline-block;
+  font-size: 13px;
+  color: #727272;
+  vertical-align: middle;
+}
+
+.footer_contents .info_area ul li::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 12px;
+  background-color: #484848;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+
+.footer_contents .info_area ul li:last-of-type::after {
+  display: none;
+}
+
+.footer_contents .copy {
+  font-size: 12px;
+  color: #727272;
+  margin-top: 20px;
+}
+
 /** ===================== 예매내역 ===================== **/
 .history_contents::after {
   display: block;
@@ -1119,6 +1206,67 @@ input[type="date"]:after {
   margin-right: 10px;
 }
 
+.join_contents .step_items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.6em;
+  margin-bottom: 6em;
+}
+
+.join_contents .step_items.type1 {
+  background: url(/PETC/assets/images/sub/step_bg_01.png) no-repeat;
+  background-size: 100%;
+}
+
+.join_contents .step_items.type2 {
+  background: url(/PETC/assets/images/sub/step_bg_02.png) no-repeat;
+  background-size: 100%;
+}
+
+.join_contents .step_items.type3 {
+  background: url(/PETC/assets/images/sub/step_bg_03.png) no-repeat;
+  background-size: 100%;
+}
+
+.join_contents .step_items.type4 {
+  background: url(/PETC/assets/images/sub/step_bg_04.png) no-repeat;
+  background-size: 100%;
+}
+
+.join_contents .step_items .step {
+  width: calc(100%/4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.join_contents .step_items .step.active span.num {
+  font-size: 0;
+  background: url(/PETC/assets/images/sub/step_chk.svg) center no-repeat;
+}
+
+.join_contents .step_items .step span {
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.join_contents .step_items .step span.num {
+  display: block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  font-size: 1.4em;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 10px;
+}
+
 .join_contents .sec_tit {
   font-size: 2em;
   text-align: center;
@@ -1126,7 +1274,101 @@ input[type="date"]:after {
   font-weight: 500;
   margin-bottom: 1.5em;
 }
-		
+
+.join_contents .step1_conts {
+  width: 40em;
+  margin: 0 auto 19em;
+}
+
+.join_contents .step1_conts .line_btn {
+  font-size: 1.6em;
+  width: 100%;
+  height: 3.125em;
+}
+
+.join_contents .step1_conts p {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #fff;
+  word-break: keep-all;
+  line-height: 1.6;
+}
+
+.join_contents .step2_conts .all_chk_box {
+  margin-bottom: 6em;
+}
+
+.join_contents .step2_conts .all_chk_box input[type="checkbox"] + label {
+  font-size: 1.8em;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.join_contents .step2_conts .chk_box {
+  margin-bottom: 2em;
+}
+
+.join_contents .step2_conts .chk_box input[type="checkbox"] + label {
+  font-size: 1.8em;
+  font-weight: 400;
+}
+
+.join_contents .step2_conts .agree_box {
+  margin-bottom: 6em;
+}
+
+.join_contents .step2_conts .agree_box textarea {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  padding: 1.6em;
+  color: #fff;
+  font-size: 1.6em;
+  height: 11.25em;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-break: keep-all;
+  cursor: pointer;
+}
+
+.join_contents .step2_conts .agree_box textarea.short {
+  height: 6.5em;
+}
+
+.join_contents .step2_conts .agree_box textarea:focus {
+  outline: none;
+}
+
+.join_contents .step2_conts .agree_box textarea::-webkit-scrollbar {
+  width: 6px;
+  /* height 6px : 가로 스크롤 크기 */
+}
+
+.join_contents .step2_conts .agree_box textarea::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.join_contents .step2_conts .agree_box textarea::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: #fff;
+  height: 50px;
+}
+
+.join_contents .step2_conts .agree_box textarea::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+.join_contents .step4_conts p {
+  background: url(/PETC/assets/images/sub/join_chk.png) top center no-repeat;
+  background-size: 3.333em;
+  text-align: center;
+  font-size: 1.8em;
+  color: #fff;
+  padding-top: 5em;
+}									
+											
 #scheduleList .movie_tit .sub_txt{display:none !important;}
 #scheduleList .time_wrap .time_wrap_top .sub_text{display:none !important;}
 .time_wrap .time_wrap_top .location{display:block !important;}
