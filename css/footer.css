@@ -1,0 +1,11 @@
+#footer{
+    width: calc(100% - 80px);
+    height: 70px;
+    /* position: fixed; */
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    background: #020001;
+    /* min-width: 1560px; */
+    min-width: 1280px;
+}
