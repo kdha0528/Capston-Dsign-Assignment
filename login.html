@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/leftMenu.css">
     <link rel="stylesheet" href="css/slick.css">
   </head>
+  <form action="login.php" method="POST" name="form">
   <body>
     <div id="wrap">
       <div id="leftMenu">
@@ -69,14 +70,14 @@
                                     <p class="sub">아이디, 비밀번호를 입력하신 후, 로그인 버튼은 눌러주세요.</p>
                                     <div class="tab_btn">
                                         <button type="button" class="acive"><a href="login.html">로그인</a></button>
-                                        <button type="button"><a href="register_f.html">회원가입</a></button> 
+                                        <button type="button"><a href="signup.html">회원가입</a></button> 
                                     </div>
                                     <form class="form_area">
-                                        <input type="text" name="txtUserId" id="txtUserId" placeholder="아이디">
-                                        <input type="password" name="txtUserPw" id="txtUserPw" placeholder="비밀번호">
+                                        <input type="text" name="id" id="id" placeholder="username">
+                                        <input type="password" name="password" id="password" placeholder="password">
                                         <label for="keepid" style="float:left;color:#fff;">
                                         </label>
-                                        <button type="button" class="full_btn big submit">로그인</button>
+                                        <button type="submit" class="full_btn big submit">로그인</button>
                                     </form>
                                 </div>
                             </div>
@@ -91,5 +92,7 @@
 
         </div>
     </div>
+  </form>
   </body>
+  
 </html>

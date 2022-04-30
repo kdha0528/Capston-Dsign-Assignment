@@ -3,119 +3,55 @@
 <meta http-equiv="Content-Type" content="text/html"; charset= "utf-8">
 <title>mypage</title>
 </head>
+<bod
+  
 
-
-  <?php
-	# DB 연결하기
-include_once('dbconn.php');
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="utf-8">
-        <title>
-          SCSC CINEMA
-        </title>
-        <link rel="stylesheet" href="" media="screen" title="no title" charset="utf-8">
-      </head>
-      <body>
-        <header>
-            <h2 id="mypage">
+ 
+     
+      
+            
               <?php
-              session_start();
-              if(!isset($_SESSION['id']) || !isset($_SESSION['name'])) {
-              echo "<meta http-equiv='refresh' content='0;url=login.php'>";
-              exit;
-              }
-              $user_id = $_SESSION['id'];
-              $user_name = $_SESSION['name'];
-              echo "<p>안녕하세요. $name($id)님</p>";
-              echo "<p><a href='logout.php'>로그아웃</a></p>";
-              echo "<p><a href='mainmenu.html'>메뉴화면</a></p>";
-              echo "<p>회원정보를 확인합니다.</p>";
-              ?>
-            </h2>
-        </header>
-        <article>
-          <table>
-            <tr>
-              <th>
-                회원ID
-              </th>
-              <th>
-                회원이름
-              </th>
-              <th>
-                핸드폰번호
-              </th>
-              <th>
-                예약확인
-              </th>
-              <th>
-              이메일
-            </th>
-            <th>
-            나이 
-          </th>
-          <th>
-          가입일 
-        </th>
-            </tr>
-            <?php
-              $sql = "SELECT * FROM users";    //입력된 아이디의 예약상태를 알아냄.
-              $result = mysqli_query($conn,$sql);
+              #session_start();
+              #include_once('dbconn.php');
+              #if( !isset($_SESSION['name']) ) {  #!isset($_SESSION['id']) ||
+              #echo "<meta http-equiv='refresh' content='0;url=login.html'>";
+              #exit;#
+              #}
+              #else
 
-              while($row = mysqli_fetch_assoc($result)){
-                $id = $row["id"];
-                $name = $row["name"];
-                $address = $row["address"];
-                $id = $row["id"];
-                $password =$row["password"];
-                $phone1 = $row["phone"];
-                $phone2 = $row["phone2"];
-                $phone3 = $row["phone3"];
-                $phone = $phone1."-".$phone2."-".$phone3;
-                $age = $row["age"];
-              	$email = $row["email"];
-               	$date = $row["date"];
-                echo "
-                    <tr>
-                      <td>
-                        {$id}
-                      </td>
-                      <td>
-                        {$name}
-                      </td>
-                      <td>
-                        {$phone}
-                      </td>
-                      <td>
-                      {$address}
-                      </td>
-                    <td>
-                    {$password}
-                  </td>
-                  <td>
-                   {$age}
-                  </td>
-                  <td>
-                  {$email}
-                  </td>
-                  <td>
-                  {$date}
-                  </td>
-                      
-                    </tr>"
+
+             # $user_id = $_SESSION['id'];
+             # $user_name = $_SESSION['name'];
+             # echo "<p>안녕하세요. $name($id)님</p>";
+             # echo "<p><a href='logout.php'>로그아웃</a></p>";
+             # echo "<p><a href='MomentCinema.html'>돌아가기</a></p>";
+             # echo "<p>회원정보를 확인합니다.</p>";
+      
+              include_once('dbconn.php');
+              # 데이터 가져오기
+              $id = $_POST["id"];
+              $password =$_POST["password"];
+	            $name = $_POST["name"];
+	            $phone = $_POST["phone"];
+	            $age = $_POST["age"];
+	            #date_default_timezone_set("Asia/Seoul");
+	            $date = date("Y/m/d");
+            	$email = $_POST["email"];
+                
+              # sql 데이터 수정하기
+              $sql = "update users set id = '$id', password = '$password', name = '$nmae' phone = '$phone',
+              age = '$age', date = '$date' email = '$email' ";
                 
               
-
-           
-
-          </table>
-
-        </article>
-      </body>
-    </html>
-
-  </body>
-</html>
+        
+              # SQL 실행하기
+              if($conn->query($sql)) {
+               #$_SESSION['name']= $name;
+               echo "<script>location.replace('momentCinema.html');</script>";
+               echo "<script>alert('회원정보의 수정이 완료되었습니다')</script>";
+              }else {
+                echo "<script>alert('회원정보 수정중 오류가 발생했습니다')</script>";
+                echo "<script>location.replace('mypage.html');</script>";
+              }
+              ?>
 

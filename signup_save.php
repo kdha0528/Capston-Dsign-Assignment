@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC >
+<!DOCTYPE HTML >
 <head>
 <meta charset="utf-8">
 <meta http-equiv="Content-Type"  content="text/html" /> 
@@ -14,25 +14,26 @@ include_once('dbconn.php');
 # 데이터 가져오기
 	
 	
-    $id = $_POST['id'];
-    $pw =$_POST['pw'];
-	$name = $_POST['name'];
-	$phone = $_POST['phone'];
-	$age = $_POST['age'];
-	$point = 0;
-	date_default_timezone_set("Asia/Seoul");
+    $id = $_POST["id"];
+    $password =$_POST["password"];
+	$name = $_POST["name"];
+	$phone = $_POST["phone"];
+	$age = $_POST["age"];
+	#date_default_timezone_set("Asia/Seoul");
 	$date = date("Y/m/d");
-	$email = $_POST['email'];
+	$email = $_POST["email"];
+	
 	
 
 	# SQL 작성하기
-	$sql = "insert into users values('$id','$pw','$name','$phone','$age',$point,'$date','$email')";
+$sql = "insert into users values('$id','$password','$name','$phone','$age','$date','$email')";
 # SQL 실행하기
 if($conn->query($sql)) {
-	echo "<script type='text/javascript'>alert('회원가입에 성공했습니다.');</script>"
-	echo "<script>location.href='MomentCinema.html'</script>";
-}else {
-	echo "<script type='text/javascript'>alert('회원가입 중에 오류가 발생하였습니다. $conn->error');</script>";
-	echo "<script>location.href='signup.html'</script>";
+	echo "<script>alert('$name 회원의 신규가입이 완료되었습니다')</script>";
+	echo "<script>location.replace('momentCinema.html');</script>";
+}
+else {
+	echo "<script>alert('회원가입중 오류가 발생했습니다')</script>";
+	echo "<script>location.replace('momentCinema.html');</script>";
 }
 ?>
