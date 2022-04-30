@@ -6,9 +6,41 @@ $passwd = "daejin1234";    //비밀번호  #(root)
 $dbname = "momentcinema_db"; //연결할 데이터베이스명
 
 $conn = new mysqli($server,$user,$passwd,$dbname); //서버에 접속요청 
-if($conn->connect_error)
-     die(" 접속 오류");
-	
+
+$filtered = array(
+     'id'=>mysqli_real_escape_string($conn, $_POST['id']),
+     'pw'=>mysqli_real_escape_string($conn, $_POST['pw']),
+     'name'=>mysqli_real_escape_string($conn, $_POST['name']),
+     'phone'=>mysqli_real_escape_string($conn, $_POST['phone']),
+     'age'=>mysqli_real_escape_string($conn, $_POST['age']),
+     'point'=> intval($_POST['point']),
+     'date'=>mysqli_real_escape_string($conn, $_POST['date']),
+     'email'=>mysqli_real_escape_string($conn, $_POST['email'])
+);
+
+$sql = "
+  INSERT INTO topic
+    (id, pw, name, phone, age, point, date, email)
+    VALUES(
+      '{$filtered['id']}',
+      '{$filtered['pw']}',
+      '{$filtered['name']}',
+      '{$filtered['phone']}',
+      '{$filtered['age']}',
+      '{$filtered['point']}',
+      '{$filtered['date']}',
+      '{$filtered['email']}'
+        NOW()
+    )
+";
+
+$result = mysqli_query($conn, $sql);
+if($result === false){
+  echo '저장하는 과정에서 문제가 생겼습니다. 관리자에게 문의해주세요';
+  error_log(mysqli_error($conn));
+} else {
+  echo '성공했습니다. <a href="create.php">돌아가기</a>';
+}
 	
 ?>	 
 
