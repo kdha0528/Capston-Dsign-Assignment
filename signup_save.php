@@ -15,7 +15,7 @@ include_once('dbconn.php');
 	
 	
     $id = $_POST['id'];
-    $password =$_POST['password'];
+    $pw =$_POST['pw'];
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
 	$age = $_POST['age'];
@@ -26,7 +26,7 @@ include_once('dbconn.php');
 	
 
 	# SQL 작성하기
-	$sql = "insert into users values('$id','$password','$name','$phone','$age',$point,'$date','$email')";
+	$sql = "insert into users values('$id','$pw','$name','$phone','$age',$point,'$date','$email')";
 # SQL 실행하기
 if($conn->query($sql)) {
 	echo "<script type='text/javascript'>alert('회원가입에 성공했습니다.');</script>"
