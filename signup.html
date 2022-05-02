@@ -64,7 +64,7 @@
                       <p class="join_tit">회원가입</p>
                       <section class="step_cont">
                         <p class="sec_tit">개인정보 입력</p>
-                        <form action="signup_save.php" method="POST" > 
+                        <form action="signup_save.php" method="POST" name="form" > 
                           <table class="info_table_type">
                             <colgroup>
                               <col width="15%">
@@ -78,7 +78,7 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="text" class="line_input" id="id" name="id" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="text" class="line_input" //id="id" name="id" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
                               </tr>
                               <tr>
@@ -88,7 +88,7 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="password" class="line_input" id="password" name="password" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="password" class="line_input" //id="password" name="password" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
                               </tr>
                               <tr>
@@ -98,7 +98,7 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="text" class="line_input" id="name" name="name" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="text" class="line_input" //id="name" name="name" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
                               </tr>
                               <tr>
@@ -108,7 +108,7 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="text" class="line_input" id="phone" name="phone" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="text" class="line_input" //id="phone" name="phone" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
                               </tr>
                               <tr>
@@ -118,19 +118,9 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="text" class="line_input" id="age" name="age" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="text" class="line_input" //id="age" name="age" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
-                              </tr>
-                              <tr>
-                                <td>
-                                  <span>
-                                    생일
-                                  </span>
-                                </td>
-                                <td>
-                                  <input type="text" class="line_input" id="date" name="date" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
-                                </td>
-                              </tr>
+                              </tr>                          
                               <tr>
                                 <td>
                                   <span>
@@ -138,7 +128,7 @@
                                   </span>
                                 </td>
                                 <td>
-                                  <input type="email" class="line_input" id="email" name="email" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
+                                  <input type="email" class="line_input" //id="email" name="email" style="border: 1px solid rgba(255, 255, 255, 0.2)"/>
                                 </td>
                               </tr>
                             </tbody>
@@ -146,6 +136,7 @@
                           <div class="btn_layout mt40">
                             <button type="button" class="line_btn" onclick="location.href='#';">취소</button>
                             <button type="submit" class="full_btn btn-submit">확인</button>
+                            
                           </div>
                         </form>
                       </section>
