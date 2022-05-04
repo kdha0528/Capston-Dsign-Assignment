@@ -2,26 +2,30 @@
 session_start();
 	# DB 연결하기
 	
+    //if(!isset($_SESSION['name'])){ 
+      //  echo "<script>alert('$name 님은 이미로그인중입니다')";   
+    //    $count=0;
+        # if( !isset($_SESSION['name'])) {
+            
 include_once('dbconn.php');
 # 데이터 가져오기
-	
+
 	$id = $_POST["id"];
     $password =$_POST["password"];
+   
     # sql 작성
     $sql = "SELECT * FROM users where id = '$id' and password = '$password'";
   
     #sql 실행 
-    //if(!isset($_SESSION['name'])){        
-    //    $count=0;
-        # if( !isset($_SESSION['name'])) {
+    
     $result = $conn->query($sql);
     if($result->num_rows > 0) {   
         $row = $result->fetch_assoc();
         $name = $row['name'];
         $_SESSION['id'] = $row['id'];  
         $_SESSION['name'] = $row['name'];    
-       # $_SESSION['name'] = $id['name'];  
-       # $_SESSION['password'] = $name['password'];
+        
+       
         #  $sql = "select count(*) rowcnt from user where id = '$id'";
         #  $result = $conn->query($sql);
         #  if($result->num_rows > 0){
