@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/leftMenu.css">
     <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/sub.css" type="text/css" />
+    <link rel="stylesheet" href="css/sub.css">
   </head>
   <body>
-    <?php
+  <?php
       session_start();
       include_once('dbconn.php');
       if(isset($_SESSION['name'])){
@@ -68,35 +68,7 @@
       </div>
     </div>
     <div id="content" class="main_box">
-      <div class="inner">
-        <div id="Wrapper">
-          <div id="Main" style="height:100%">
-            <section>
-              <div class="layout_box scroll_box">
-                <div class="inner">
-                  <div class="login_contents" style="margin-top:150px;">
-                    <div class="inner">
-                      <p class="main">로그인</p>
-                      <p class="sub">아이디, 비밀번호를 입력하신 후, 로그인 버튼은 눌러주세요.</p>
-                      <div class="tab_btn">
-                          <button type="button" class="acive"><a href="login.php">로그인</a></button>
-                          <button type="button"><a href="signup.php">회원가입</a></button> 
-                      </div>
-                      <form class="form_area" action="login_proc.php" method="POST" name="form">
-                        <input type="text" name="id" //id="id" //placeholder="id">
-                        <input type="password" name="password" //id="password" //placeholder="password">
-                        <label for="keepid" style="float:left;color:#fff;">
-                        </label>
-                        <button type="submit" class="full_btn big submit">로그인</button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div id="footer">
 
