@@ -41,7 +41,7 @@
               <a href="reservation.html">예매</a>
             </li>
             <li>
-              <a href="movie.html">영화</a>
+              <a href="movie.php">영화</a>
             </li>
         </div>
         <div class="top_menu">

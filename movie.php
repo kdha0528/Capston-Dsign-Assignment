@@ -27,25 +27,25 @@
         <p class="copyright">Copyright  모멘트시네마  All Rights Reserved.</p>
         </div>
       </div>
-    </div>
-    <div id="header">
-      <div class="inner">
-        <div class="logo">
-          <a href="MomentCinema.php">
-            <img src="images/logo.png"alt="logo" style="width: 150px">
-          </a>
-        </div>
-        <div class="menu">
-          <ul>
-            <li>
-              <a href="reservation.php">예매</a>
-            </li>
-            <li>
-              <a href="movie.php">영화</a>
-            </li>
-        </div>
-        <div class="top_menu">
-          <div class="login" style="margin-right: 0;">
+      </div>
+      <div id="header">
+        <div class="inner">
+          <div class="logo">
+            <a href="momentCinema.php">
+              <img src="img/logo.png"alt="logo" style="width: 150px">
+            </a>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="reservation.php">예매</a>
+              </li>
+              <li>
+                <a href="movie.php">영화</a>
+              </li>
+          </div>
+          <div class="top_menu">
+            <div class="login" style="margin-right: 0;">
             <ul>
               <?php if(!isset($_SESSION['name'])){ ?>
                 <li>
@@ -63,12 +63,12 @@
                 </li>
                 <?php } ?>
             </ul>
+            </div>
+          </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div id="content" class="main_box">
-    +          <div id="Wrapper">
+        <div id="content" class="main_box">
+          <div id="Wrapper">
             <div id="main">
               <div class="layout_box scroll_box">
                 <div class="inner">
@@ -221,9 +221,10 @@
               </div>
             </div>
           </div>
-    </div>
-    <div id="footer">
+        </div>
+        <div id="footer">
 
-    </div>
+        </div>
+    
   </body>
 </html>

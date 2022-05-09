@@ -42,7 +42,7 @@
               <a href="reservation.html">예매</a>
             </li>
             <li>
-              <a href="movie.html">영화</a>
+              <a href="movie.php">영화</a>
             </li>
         </div>
         <div class="top_menu">
@@ -150,7 +150,7 @@
                           </tbody>
                        </table>
                        <div class="btn_layout mt40">
-                         <button type="submit" class="line_btn">회원 탈퇴</button>
+                         
                          <button type="submit" class="full_btn btn-submit">회원정보 수정</button>
                        </div>
                       </secton>
