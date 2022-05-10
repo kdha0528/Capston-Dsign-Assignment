@@ -1,9 +1,0 @@
-.slide{position: relative;}
-.slide button {position: absolute; z-index: 10; top: 40%; transform: translateY(-50%);
-    width: 70px; height: 70px; border-radius: 100%; background: rgba(0,0,0,0.4);
-}
-.slide button:before{font-family: "xeicon"; color: white; font-size: 30px;}
-.slide button.slick-prev {left: 20px; font-size: 0; color: transparent;}
-.slide button.slick-prev:before{content: "\e93d";}
-.slide button.slick-next {right: 20px; font-size: 0; color: transparent;} 
-.slide button.slick-next:before{content: "\e940";}
