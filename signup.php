@@ -32,7 +32,7 @@
       <div class="inner">
         <div class="logo">
           <a href="MomentCinema.php">
-            <img src="images/logo.png"alt="logo" style="width: 150px">
+            <img src="img/logo.png"alt="logo" style="width: 150px">
           </a>
         </div>
         <div class="menu">

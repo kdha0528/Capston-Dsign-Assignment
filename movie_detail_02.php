@@ -31,7 +31,7 @@
         <div class="inner">
           <div class="logo">
             <a href="MomentCinema.php">
-              <img src="images/logo.png"alt="logo" style="width: 150px">
+              <img src="img/logo.png"alt="logo" style="width: 150px">
             </a>
           </div>
           <div class="menu">
@@ -77,7 +77,7 @@
                                 <div class="movie_poster">
                                     <div class="poster"><div id="poster_image"  class="img">
                                         <!---포스터 이미지 주소-->
-                                        <img src="images/movie_poster_04.jpg" >
+                                        <img src="img/movie_poster_04.jpg" >
                                     </div></div>
                                     <div class="movie_info_txt">
                                         <p class="tit">앵커</p>

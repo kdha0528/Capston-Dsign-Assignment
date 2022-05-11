@@ -43,7 +43,7 @@
       <div class="inner">
         <div class="logo">
           <a href="MomentCinema.php">
-            <img src="images/logo.png"alt="logo" style="width: 150px">
+            <img src="img/logo.png"alt="logo" style="width: 150px">
           </a>
         </div>
         <div class="menu">
@@ -82,9 +82,9 @@
     <i class="xi-angle-left-thin"></i>
             <i class="xi-angle-right-thin"></i>
             <div class="slide">
-                <div><images src="images/slide1.jpg" alt=""></div>
-                <div><images src="images/slide2.jpg" alt=""></div>
-                <div><images src="images/slide3.jpg" alt=""></div>
+                <div><img src="img/slide1.jpg" alt=""></div>
+                <div><img src="img/slide2.jpg" alt=""></div>
+                <div><img src="img/slide3.jpg" alt=""></div>
             </div>
             
             <script>
@@ -100,6 +100,6 @@
 
       
           </div>  
-      </div>
+      
   </body>
 </html>

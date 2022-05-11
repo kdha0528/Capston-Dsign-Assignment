@@ -81,7 +81,7 @@
                                 <div class="movie_poster">
                                     <div class="poster"><div id="poster_image" class="img">
                                         <!---포스터 이미지 주소-->
-                                        <img src="images/movie_poster_02.jpg" >
+                                        <img src="img/movie_poster_02.jpg" >
                                     </div></div>
                                     <div class="movie_info_txt">
                                         <p class="tit">신비한 동물들과 덤블도어의 비밀</p>
@@ -167,12 +167,64 @@
                                 </div>  
                             </div>
                         </div>
+                   
+                        <?php
+    session_start();
+	# DB 연결하기
+	
+    include_once('dbconn.php');
+
+
+$sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
+   $result = $conn->query($sql);
+   
+   mysqli_close($conn); // 디비 접속 닫기
+?>
+
+
+
+<!--BoardPage-->
+<div class="container">
+            <div class="board_top">
+                <h1 class="login" class="board_title">
+                <font color="white"> <?=$id?>님이 쓴 댓글   </font> </h1> 
+            </div>
+            
+            <section id = "posts">
+            <div class="commentbox">
+                <table id="commenttable">
+                    <tr class="commentbox_header">
+                        <th class="commentbox_header_1">
+                        <font color="white"><?=$id?></font>                        
+                      </th><th class="commentbox_header_2">
+                      <font color="white"><?=$comment?><br></font>
+                    </th><th class="commentbox_header_3">
+                    <font color="white"><?=$date?></font></th>
+                    </tr> 
+                   
+                       
+                     
+                </table>
+            </div>
+            </section>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
                         <link rel="stylesheet" href="css/sub.css" type="text/css" />
                         <div clas="inner">
                           <div class="comment_contents" style="margin-top:150px;">
                           <form action="comment.php" method="POST" name="form">
                               <div class="inner">
-                                <p class="main">댓글</p>
+                                <p class="main">댓글달기</p>
                                 <br>
                                   <form class="form_area">
                                       <input type="text" name="comment" id= "comment" placeholder="댓글을 입력하시오">
@@ -182,10 +234,14 @@
                               </div>
                           </div>
                       </div>
+
+
+
                     </div>
                 </div>    
             </section> 
         </div>
+        </form>
         <div id="footer">
 
         </div>

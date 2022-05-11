@@ -22,11 +22,11 @@
 
         if($conn->query($sql)) {
             echo "<script>alert('댓글이 작성되었습니다')</script>";
-            echo "<script>location.replace('movie.php');</script>";
+            echo "<script>location.replace('movie_detail_00.php');</script>";
         }        
         else {
             echo "<script>alert('댓글작성중 오류가 발생했습니다')</script>";       
-           //이전 화면으로 돌아가는 명령어? echo "<script>location.replace('momentCinema.php');</script>";
+            echo "<script>location.replace('momentCinema.php');</script>";
         }
     }
         ?>

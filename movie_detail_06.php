@@ -31,7 +31,7 @@
         <div class="inner">
           <div class="logo">
             <a href="momentCinema.html">
-              <img src="images/logo.png"alt="logo" style="width: 150px">
+              <img src="img/logo.png"alt="logo" style="width: 150px">
             </a>
           </div>
           <div class="menu">
@@ -71,7 +71,7 @@
                                 <div class="movie_poster">
                                     <div class="poster"><div id="poster_image" class="img">
                                         <!---포스터 이미지 주소-->
-                                        <img src="images/movie_poster_08.jpg" >
+                                        <img src="img/movie_poster_08.jpg" >
                                     </div></div>
                                     <div class="movie_info_txt">
                                         <p class="tit">내가 처음으로 사랑한 소녀</p>

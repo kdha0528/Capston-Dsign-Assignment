@@ -33,7 +33,7 @@
       <div class="inner">
         <div class="logo">
           <a href="MomentCinema.php">
-            <img src="images/logo.png"alt="logo" style="width: 150px">
+            <img src="img/logo.png"alt="logo" style="width: 150px">
           </a>
         </div>
         <div class="menu">
@@ -158,9 +158,43 @@
                   </div>  
                 </section>
                 </div>
+               </div>
+               </div>
+                </div>
+
+
+
+
+
+
+                <div id="content" class="main_box">
+            <i class="xi-angle-left-thin"></i>
+            <i class="xi-angle-right-thin"></i>
+            <div class="slide">
+                <div><img src="img/slide1.jpg" alt=""></div>
+                <div><img src="img/slide2.jpg" alt=""></div>
+                <div><img src="img/slide3.jpg" alt=""></div>
             </div>
-          </div>
+            
+
+
+
+            <script>
+                $(function(){
+                     $('.slide').slick({
+                         autoplay: true,
+                         autoplaySpeed: 2000
+                     });
+                });
+           </script> 
         </div>
+
+
+
+
+
+
+        
         <div id="footer">
 
         </div>
