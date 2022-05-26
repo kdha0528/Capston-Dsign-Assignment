@@ -187,19 +187,19 @@ $sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
 <div class="container">
             <div class="board_top">
                 <h1 class="login" class="board_title">
-                <font color="white"> <?=$id?>님이 쓴 댓글   </font> </h1> 
+                <font color="white"> 익명 댓글   </font> </h1> 
             </div>
             
             <section id = "posts">
             <div class="commentbox">
-                <table id="commenttable">
+               
                     <tr class="commentbox_header">
-                        <th class="commentbox_header_1">
-                        <font color="white"><?=$id?></font>                        
+                    <th class="commentbox_header_1">
+                        <font color="white"><?=$comment?></font>                        
                       </th><th class="commentbox_header_2">
-                      <font color="white"><?=$comment?><br></font>
+                      <font color="white"><?=$date?><br></font>
                     </th><th class="commentbox_header_3">
-                    <font color="white"><?=$date?></font></th>
+                    <font color="white"><?=$rate?></font></th>
                     </tr> 
                    
                        

@@ -12,6 +12,38 @@
     <link rel="stylesheet" href="css/leftMenu.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/sub.css">
+    <script type="text/javascript">
+     var cc=0
+     function show(id){ 
+             document.getElementById(id).style.display="block";
+    }
+   </script>
+    <script>
+        function hide(id){
+            document.getElementById(id).style.display="none";
+        }
+      </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+      <script>
+        $(document).ready(function() {
+            $(":checkbox").change(function() {
+                var cnt = $("#person").val();
+                 
+                if( cnt==$(":checkbox:checked").length ) {
+                    $(":checkbox:not(:checked)").attr("disabled", "disabled");
+                }
+                else {
+                    $(":checkbox").removeAttr("disabled");
+                }
+            });
+             
+            $("#person").change(function(){
+                $(":checkbox").removeAttr("checked");
+                $(":checkbox").removeAttr("disabled");
+            });
+        });
+    </script>
   </head>
   <body>
   <?php

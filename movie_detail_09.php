@@ -30,30 +30,30 @@
       <div id="header">
         <div class="inner">
           <div class="logo">
-            <a href="momentCinema.html">
+            <a href="momentCinema.php">
               <img src="img/logo.png"alt="logo" style="width: 150px">
             </a>
           </div>
           <div class="menu">
             <ul>
               <li>
-                <a href="reservation.html">예매</a>
+                <a href="reservation.php">예매</a>
               </li>
               <li>
-                <a href="movie.html">영화</a>
+                <a href="movie.php">영화</a>
               </li>
           </div>
           <div class="top_menu">
             <div class="login" style="margin-right: 0;">
               <ul>
                 <li>
-                  <a href="login.html">로그인</a>
+                  <a href="login.php">로그인</a>
                 </li>
                 <li>
-                  <a href="register_f.html">회원가입</a>
+                  <a href="signup.php">회원가입</a>
                 </li>
                 <li>
-                  <a href="mypage.html">마이페이지</a>
+                  <a href="mypage.php">마이페이지</a>
                 </li>
               </ul>
             </div>
@@ -96,7 +96,7 @@
                                             </div>
                                         </div>
                                         <!--예매사이트와 연동-->
-                                        <button class="movie_btn"><a href="reservation.html">예매하기</a></button>
+                                        <button class="movie_btn"><a href="reservation.php">예매하기</a></button>
                                     </div>
                                 </div>
                                 <div class="movie_info_text">
