@@ -169,22 +169,41 @@
                         </div>
                    
                         <?php
-    session_start();
+    
 	# DB 연결하기
 	
     include_once('dbconn.php');
 
 
-$sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
-   $result = $conn->query($sql);
+   #$sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
+   #$result = $conn->query($sql);
    
-   mysqli_close($conn); // 디비 접속 닫기
+  
+    $result = mysqli_query($conn,"SELECT * FROM comment");
+    echo  
+    "<table border='1' bgcolor='white'  bordercolor='white' width ='1000' height='1000' align = 'center'> 
+   
+      <tr> <th>익명 후기</th> <th>평점</th> <th>작성일</th> </tr>";
+    $n = 1;
+    while($row = mysqli_fetch_array($result)){
+    echo "<tr>  ";
+    echo "<th>" . $row['comment'] . "   </th>";
+    echo "<th>" . $row['rate'] . "</th>";
+    echo "<th>" . $row['date'] . "</th>";
+    echo "</tr>";
+    $n++;
+    }
+    echo "</table>";
+    mysqli_close($conn);
+    ?>
+
+  
 ?>
 
 
 
 <!--BoardPage-->
-<div class="container">
+<!--<div class="container">
             <div class="board_top">
                 <h1 class="login" class="board_title">
                 <font color="white"> 익명 댓글   </font> </h1> 
@@ -195,7 +214,7 @@ $sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
                
                     <tr class="commentbox_header">
                     <th class="commentbox_header_1">
-                        <font color="white"><?=$comment?></font>                        
+                        <font color="white"><?=$comment?><br> </font>                        
                       </th><th class="commentbox_header_2">
                       <font color="white"><?=$date?><br></font>
                     </th><th class="commentbox_header_3">
@@ -207,7 +226,7 @@ $sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
                 </table>
             </div>
             </section>
-        </div>
+        </div> -->
 
 
 
@@ -224,11 +243,19 @@ $sql = "SELECT * FROM comment where comment = '$comment' and rate = '$rate'";
                           <div class="comment_contents" style="margin-top:150px;">
                           <form action="comment.php" method="POST" name="form">
                               <div class="inner">
-                                <p class="main">댓글달기</p>
+                                <p class="main">후기&nbsp작성   </p>
+                                
                                 <br>
                                   <form class="form_area">
                                       <input type="text" name="comment" id= "comment" placeholder="댓글을 입력하시오">
-                                      <input type="int" name="rate" id= "rate" placeholder="평점을 입력해주세요 ">
+                                      
+                                      <select  name="rate" id= "rate">
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      </select>  
                                       <button type="submit" class="comment_submit">등록</button>
                                   </form>
                               </div>
