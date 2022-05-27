@@ -181,7 +181,7 @@
   
     $result = mysqli_query($conn,"SELECT * FROM comment");
     echo  
-    "<table border='1' bgcolor='white'  bordercolor='white' width ='1000' height='1000' align = 'center'> 
+    "<table border='1' bgcolor='white'  bordercolor='white' width ='1400' height='1400' align = 'center'> 
    
       <tr> <th>익명 후기</th> <th>평점</th> <th>작성일</th> </tr>";
     $n = 1;
@@ -247,7 +247,8 @@
                                 
                                 <br>
                                   <form class="form_area">
-                                      <input type="text" name="comment" id= "comment" placeholder="댓글을 입력하시오">
+                                      <input type="text" name="comment" id= "comment" placeholder="후기를 남겨주세요" 
+                                      style="width:1000px;height:80px;font-size:30px;">
                                       
                                       <select  name="rate" id= "rate">
                                       <option value="1">1</option>
