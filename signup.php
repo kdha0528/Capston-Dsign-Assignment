@@ -77,8 +77,7 @@
                   <p class="join_tit">회원가입</p>
                   <section class="step_cont">
                     <p class="sec_tit">개인정보 입력</p>
-                    <form action="signup_proc.php" method="POST" name="form" >
-                    <form name="check" action="checkid.php" method="post"> 
+                    <form action="signup_proc.php" method="POST" name="form" >               
                       <table class="info_table_type">
                         <colgroup>
                           <col width="15%">
@@ -90,17 +89,11 @@
                               <span>
                                 아이디
                               </span>
-                            </td>
-                           
-                                                            
+                            </td>                                                                                      
                             <td>
-                              <input type="text" class="line_input" //id="id" name="id"   style="border: 1px solid rgba(255, 255, 255, 0.2)"/>   
-                              
-                             
-                                                 
+                              <input type="text" class="line_input" //id="id" name="id"   style="border: 1px solid rgba(255, 255, 255, 0.2)"/>                                                                                                            
                             </td>
-                          </tr>
-                                          
+                          </tr>                                          
                           <tr>
                             <td>
                               <span>
