@@ -106,7 +106,7 @@
                                             </div>
                                         </div>
                                         <!--예매사이트와 연동-->
-                                        <button class="movie_btn"><a href="reservation.html">예매하기</a></button>
+                                        <button class="movie_btn"><a href="reservation.php">예매하기</a></button>
                                     </div>
                                 </div>
                                 <div class="movie_info_text">
