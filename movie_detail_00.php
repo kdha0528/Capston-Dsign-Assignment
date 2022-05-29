@@ -181,7 +181,7 @@
   
     $result = mysqli_query($conn,"SELECT * FROM comment");
     echo  
-    "<table border='1' bgcolor='white'  bordercolor='white' width ='1400' height='1400' align = 'center'> 
+    "<table border='1' bgcolor='white'  bordercolor='white' width ='1100' height='700' align = 'center'> 
    
       <tr> <th>익명 후기</th> <th>평점</th> <th>작성일</th> </tr>";
     $n = 1;
