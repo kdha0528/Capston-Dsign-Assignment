@@ -19,6 +19,13 @@
       if(isset($_SESSION['name'])){
           $id = $_SESSION['id'];
       }
+      $idx = $_GET['idx'];
+      $sql = "select * from movie where movie_index = '$idx'";
+      $result = $conn->query($sql);
+      if($result->num_rows == 0) {
+        die("검색된 데이터가 없습니다.$conn->error");
+      }
+      $row = $result->fetch_assoc();
     ?>
     <div id="wrap">
       <div id="leftMenu">
@@ -77,28 +84,29 @@
                                 <div class="movie_poster">
                                     <div class="poster"><div id="poster_image" class="img">
                                         <!---포스터 이미지 주소-->
-                                        <img src="images/movie_poster_01.jpg" >
+                                        <img src="img/movie_poster_0<?=$idx?>.jpg" >
                                     </div></div>
                                     <div class="movie_info_txt">
-                                        <p class="tit">패러렐 마더스</p>
+                                        <p class="tit"><?=$row['title']?></p>
+                                        <p class="eng_tit"><?=$row['english_title']?></p>
                                         <p class="eng_tit"></p>
 
                                         <div class="info_box">
                                             <div class="info_list">
                                                 <p class="th">장르</p>
                                                 <p class="td info">
-                                                    <span>"멜로/로맨스, 스릴러"</span>
-                                                    <span>"2022-03-31개봉"</span>
-                                                    <span>123분</span>
+                                                    <span><?=$row['ganre']?></span>
+                                                    <span>개봉일 : <?=$row['opendate']?></span>
+                                                    <span><?=$row['runningtime']?>분</span>
                                                 </p>
                                             </div>
                                             <div class="info_list">
                                                 <p class="th">감독</p>
-                                                <p class="td director">"메드로 알모도바르"</p>
+                                                <p class="td director"><?=$row['director']?></p>
                                             </div>
                                             <div class="info_list">
                                                 <p class="th">출연</p>
-                                                <p class="td actor">"페넬로페 크루즈(재니스), 밀레나 스밋(안나), 로시 드 팔마, 아이타나 산체스-기욘"</p>
+                                                <p class="td actor"><?=$row['actors']?></p>
                                             </div>
                                         </div>
                                         <!--예매사이트와 연동-->
@@ -110,30 +118,7 @@
                                     <div class="con">
                                         <p>
                                             <span style="color: rgb(85, 85, 85);">
-                                                내 아이를 낳은 그녀에게 이끌리기 시작했다
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <br>
-                                        </p>
-                                        <p>
-                                            <span style="color: rgb(85, 85, 85);">
-                                                홀로 출산을 준비 중인 사진 작가 야니스는 같은 병실에서 어린 산모 아나를 만난다.
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span style="color: rgb(85, 85, 85);">
-                                                같은 날, 같은 시간에 딸을 낳은 두 사람은 짧지만 깊은 우정을 나눈다.
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span style="color: rgb(85, 85, 85);">
-                                                야니스는 아나와 자신의 딸이 뒤바뀌었다는 사실을 알게 되지만, 
-                                            </span>
-                                        </p>
-                                        <p>
-                                            <span style="color: rgb(85, 85, 85);">
-                                                진실을 알리지 못한 채 아나와 점점 더 가까워져만 가느데...
+                                               <?=$row['description']?>
                                             </span>
                                         </p>
                                     </div>
