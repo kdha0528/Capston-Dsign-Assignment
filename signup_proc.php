@@ -24,11 +24,18 @@ include_once('dbconn.php');
 	//$date = date("Y/m/d");
 	$email = $_POST["email"];
 	
-	
 
-	# SQL 작성하기
-$sql = "insert into users values('$id','$password','$name','$phone','$age','$email')";
 # SQL 실행하기
+
+$sql = "select * from users where id = '$id'";
+$result = $conn->query($sql);
+if($result->num_rows > 0) {
+	echo "<script>alert('ID가 중복되었습니다.')</script>";
+	echo "<script>location.href='signup.php'</script>";
+}	
+
+$sql = "insert into users values('$id','$password','$name','$phone','$age','$email')";
+
 if($conn->query($sql)) {
 	echo "<script>alert('$name 회원의 신규가입이 완료되었습니다')</script>";
 	echo "<script>location.replace('momentCinema.php');</script>";
