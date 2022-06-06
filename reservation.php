@@ -147,7 +147,11 @@
                             </div>
                             <div id="movieTotalList" class="movie_list_wrap"> 
                                 <?php while($row = $result->fetch_assoc()) { ?>
-                                    <div class="movie_list">         
+                                    <?php if($movie_index == $row['movie_index']) { ?>
+                                    <div class="movie_list" style="border: 2px solid #f9880a;">    
+                                    <?php } else{ ?>
+                                        <div class="movie_list">    
+                                    <?php }?>
                                         <a href="reservation.php?movie_index=<?=$row['movie_index']?>&showtimes_index=0" id = "movie_<?=$row['movie_index']?>" name="movie">
                                             <label id="movie_label_<?=$row['movie_index']?>" class="movie_title_label live" for="movie_<?=$row['movie_index']?>" data-mid="<?=$row['movie_index']?>" data-mkey="0">
                                                 <div class="age age_<?=$row['age']?>"><?=$row['age']?></div>
@@ -177,7 +181,11 @@
                                             <p class="tit">2D 디지털 자막</p>
                                         </div>
                                         <div class="time_list_wrap">
+                                            <?php if($showtimes_index == $row3['showtimes_index']) { ?>
+                                            <div class="time_list" style = "background-color: #f9880a">
+                                            <?php } else { ?>
                                             <div class="time_list">
+                                            <?php } ?>
                                                 <a href="reservation.php?movie_index=<?=$row2['movie_index']?>&showtimes_index=<?=$row3['showtimes_index']?>">
                                                 <label class="on" for="time_0<?=$row3['showtimes_index']?>" data-mid="363">
                                                     <p id="starttime" class="start"><?=$row3['starttime']?></p>

@@ -174,7 +174,7 @@
                                 </tr>
                             </table>
                         
-                            <input type="reset" value="돌아가기" class="btn2" style="position: absolute; right: 300px; top: 80%; " >                                
+                            <a href="reservation.php" class="btn2" style="position: absolute; right: 300px; top: 80%; " >돌아가기</a>                                
                             <input type="submit" value="예매하기" class="btn2" style="position: absolute; right: 90px; top: 80%; " >
                         </form>
                     </div>
