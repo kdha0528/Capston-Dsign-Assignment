@@ -82,9 +82,9 @@
     <i class="xi-angle-left-thin"></i>
             <i class="xi-angle-right-thin"></i>
             <div class="slide">
-                <div><img src="img/slide1.jpg" alt=""></div>
-                <div><img src="img/slide2.jpg" alt=""></div>
-                <div><img src="img/slide3.jpg" alt=""></div>
+                <div><img src="img/slide1.jpg" onClick="location.href='movie_detail.php?idx=<?=1?>'"></div>
+                <div><img src="img/slide2.jpg" onClick="location.href='movie_detail.php?idx=<?=8?>'"></div>
+                <div><img src="img/slide3.jpg" onClick="location.href='movie_detail.php?idx=<?=2?>'"></div>
             </div>
             
             <script>

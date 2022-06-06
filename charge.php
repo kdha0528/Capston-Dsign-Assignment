@@ -75,15 +75,10 @@
       <div style="margin:auto; margin-top:100px; text-align:center;">
         <h1 style="color:white; font-size:50px;">마이페이지</h1>      
         <p style="color:white; font-size:20px; margin-top:30px;"><?=$id?>님의 포인트 : <?=$row['point']?>P</p>
-        <div class="btn22" style="margin-top:50px;">
-          <a href="mymovie.php" style="font-size:20px;">예약 영화 확인</a>
-        </div>
-        <div class="btn22"style="margin-top:50px;">
-          <a href="edit_myinfo.php" style="font-size:20px;">개인정보 수정</a>
-        </div>
-        <div class="btn22"style="margin-top:50px;">
-          <a href="charge.php" style="font-size:20px;">포인트 충전</a>
-        </div>
+        <form action="charge_proc.php" method="post"  style="margin-top:100px;">
+            <input type="number" name="charge" min="0" max="1000000" style="width:400px; height:50px;  border-radius: 5px; font-size: 20px; letter-spacing:5px;">
+            <input type="submit" value="충전" class="charge_btn";>
+        </form>            
       </div>
     </div>
     <div id="footer">

@@ -23,6 +23,7 @@ include_once('dbconn.php');
 	//date_default_timezone_set("Asia/Seoul");
 	//$date = date("Y/m/d");
 	$email = $_POST["email"];
+
 	
 
 # SQL 실행하기
@@ -34,7 +35,7 @@ if($result->num_rows > 0) {
 	echo "<script>location.href='signup.php'</script>";
 }	
 
-$sql = "insert into users values('$id','$password','$name','$phone','$age','$email')";
+$sql = "insert into users values('$id','$password','$name','$phone','$age','$email', 0)";
 
 if($conn->query($sql)) {
 	echo "<script>alert('$name 회원의 신규가입이 완료되었습니다')</script>";
