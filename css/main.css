@@ -512,66 +512,6 @@
     float: right;
 }
 
-.btn22 {
-    width: 200px;
-    height: 60px;
-    line-height: 60px;
-    display: block;
-    text-align: center;
-    background: #f9880a;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1.6em;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-    margin: auto;
-    margin-top: 40px;
-}
-
-.btn33 {
-    display: block;
-    width: 8.75em;
-    height: 3.125em;
-    padding: 10px 6px 1px 6px;
-    display: block;
-    text-align: center;
-    border: 1px solid #f9880a;
-    border-radius: 5px;
-    background-color: #f9880a;
-    color: #fff;
-    font-size: 1.6em;
-    font-weight: 500;
-    box-sizing: border-box;
-}
-
-.btn2 {
-    width: 200px;
-    height: 60px;
-    line-height: 60px;
-    display: block;
-    text-align: center;
-    background: #f9880a;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1.6em;
-    font-weight: 700;
-    cursor: pointer;
-    border: none;
-    float: right;
-}
-
-.charge_btn {
-    width: 54px;
-    height: 54px;
-    text-align: center;
-    background: #f9880a;
-    color: #fff;
-    border-radius: 5px;
-    font-size: 1.6em;
-    font-weight: 700;
-    cursor: pointer;
-}
 .check {
     height: 40px;
     width: 40px;
@@ -868,4 +808,65 @@
     color: white;
     letter-spacing: 1px;
     padding-right: 10px;
+}
+
+.btn22 {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    text-align: center;
+    background: #f9880a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6em;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.btn33 {
+    display: block;
+    width: 8.75em;
+    height: 3.125em;
+    padding: 10px 6px 1px 6px;
+    display: block;
+    text-align: center;
+    border: 1px solid #f9880a;
+    border-radius: 5px;
+    background-color: #f9880a;
+    color: #fff;
+    font-size: 1.6em;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.btn2 {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    display: block;
+    text-align: center;
+    background: #f9880a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6em;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    float: right;
+}
+
+.charge_btn {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    background: #f9880a;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.6em;
+    font-weight: 700;
+    cursor: pointer;
 }
