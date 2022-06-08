@@ -13,7 +13,7 @@ details,
 menu,
 figure,
 figcaption {
-    display: block
+    display: block;
 }
 
 body,
@@ -77,7 +77,7 @@ table {
 
 fieldset,
 img {
-    border: 0
+    border: 0;
 }
 
 img {
@@ -118,20 +118,20 @@ a {
     text-decoration: none;
     outline: 0;
     /* color: rgb(0, 0, 0); */
-    color: rgb(255, 255,255);
+    color: rgb(255, 255, 255);
 }
 
 a.on {
     text-decoration: none;
     outline: 0;
-    color: rgb(255, 255,255);
+    color: rgb(255, 255, 255);
 }
 
 a.off {
     text-decoration: none;
     outline: 0;
     /* color: rgb(0, 0, 0); */
-    color: rgb(255, 255,255, 0.3);
+    color: rgb(255, 255, 255, 0.3);
 }
 
 select,
@@ -148,7 +148,6 @@ html {
     font-size: 10px;
 }
 
-
 .ir {
     overflow: hidden;
     text-indent: -9999px;
@@ -161,7 +160,7 @@ html {
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis
+    text-overflow: ellipsis;
 }
 
 .block {
@@ -179,13 +178,13 @@ html {
 }
 
 .clear::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
 }
 
 .oh {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .fl {
@@ -199,7 +198,6 @@ html {
 .ovh {
     overflow: hidden;
 }
-
 
 .d_hidden {
     display: block !important;
@@ -215,15 +213,8 @@ html {
     outline: 0;
 }
 
-
-/* input 기본 스타일 초기화 */
-input {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+body {
 }
-
-body {}
 
 /* margin */
 /* margin */
@@ -255,9 +246,8 @@ body {}
     margin-top: 100px !important;
 }
 
-
 .mtM10 {
-    margin-top: -10px !important
+    margin-top: -10px !important;
 }
 
 .ml0 {
@@ -303,7 +293,7 @@ body {}
 
 /* align */
 .cl_left {
-    clear: left
+    clear: left;
 }
 
 .center {
@@ -311,23 +301,23 @@ body {}
 }
 
 .top {
-    vertical-align: top !important
+    vertical-align: top !important;
 }
 
 .bottom {
-    vertical-align: bottom
+    vertical-align: bottom;
 }
 
 .middle {
-    vertical-align: middle !important
+    vertical-align: middle !important;
 }
 
 .alignRight {
-    text-align: right !important
+    text-align: right !important;
 }
 
 .alignLeft {
-    text-align: left !important
+    text-align: left !important;
 }
 
 /* position */
@@ -338,11 +328,11 @@ body {}
 
 /* width */
 .w50 {
-    width: 50% !important
+    width: 50% !important;
 }
 
 .w33 {
-    width: 33.33% !important
+    width: 33.33% !important;
 }
 
 /* height */
@@ -356,19 +346,19 @@ body {}
 }
 
 .redTxt {
-    color: red !important
+    color: red !important;
 }
 
 .blueTxt {
-    color: blue !important
+    color: blue !important;
 }
 
 .greenTxt {
-    color: #548826 !important
+    color: #548826 !important;
 }
 
 .color777 {
-    color: #777 !important
+    color: #777 !important;
 }
 
 /* display */
@@ -381,25 +371,25 @@ body {}
     line-height: 0px !important;
 }
 
-input[type="radio"] {
+input[type='radio'] {
     appearance: none;
 }
 
-input[type="radio"] + label {
+input[type='radio'] + label {
     position: relative;
     padding-left: 30px;
     font-size: 1.6em;
     font-weight: 600;
-    color: #252B37;
+    color: #252b37;
     cursor: pointer;
 }
 
-input[type="radio"] + label span {
-    color: #6F6F6F;
+input[type='radio'] + label span {
+    color: #6f6f6f;
     margin-right: 3px;
 }
 
-#content{
+#content {
     margin-top: 80px;
     margin-left: 80px;
     min-height: calc(100vh - 150px);
@@ -416,7 +406,7 @@ input[type="radio"] + label span {
 }
 
 .con_wrap::after {
-    content: "";
+    content: '';
     display: block;
     clear: both;
 }
@@ -431,7 +421,7 @@ input[type="radio"] + label span {
     display: block;
 }
 
-@media (max-width:1230px) {
+@media (max-width: 1230px) {
     #content {
         font-size: 9px;
     }
@@ -445,13 +435,13 @@ input[type="radio"] + label span {
     }
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
     #content {
         font-size: 8px;
     }
 }
 
-@media (max-width:720px) {
+@media (max-width: 720px) {
     .title {
         text-align: center;
         display: block;
@@ -470,7 +460,14 @@ button {
     background: transparent;
 }
 
-.white{color:#fff;}
+.white {
+    color: #fff;
+}
 
-
-.sche_no {color:#fff;margin:50px 20px;font-size: 1.6em;font-weight: 600;text-align:center;}
+.sche_no {
+    color: #fff;
+    margin: 50px 20px;
+    font-size: 1.6em;
+    font-weight: 600;
+    text-align: center;
+}

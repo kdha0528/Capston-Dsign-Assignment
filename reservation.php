@@ -131,6 +131,12 @@
         </div>
     </div>
     <!--영화 선택-->
+<?php
+    if(!isset($_SESSION['name'])){
+        echo "<script type='text/javascript'>alert('로그인 후 사용 가능한 기능입니다.');</script>";
+        echo "<script>location.href='login.php'</script>";
+    }
+    else{ ?>
     <div id="content" class="main_box">
         <link rel="sylesheet" href="./css/sub.css" type="text/css">
         <div class="ticketing_box bg_box" style="bottom: 0;max-height: calc(100vh - 150px);overflow: auto;">
@@ -238,6 +244,7 @@
             </div>
         </div>
     </div>
+    
     <div id="footer">
 
     </div>
@@ -253,5 +260,7 @@
             change2('<?=$row4['starttime']?>', '<?=$row4['finishtime']?>');
         </script>
     <?php } ?>
+    
+<?php } ?>
 </body>
 </html>

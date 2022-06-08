@@ -74,11 +74,11 @@
             <div id="main">
               <div class="layout_box scroll_box">
                 <div class="inner">
-                  <div class="event_contents" style="max-width:12800px; margin:0 auto">
+                  <div class="event_contents" style="max-width:12800px; margin:0 auto;">
                     <p class="page_tit" style="margin:30px;">현재 상영작</p>
                     <ul class="event-list-body">
                       <?php while($row = $result->fetch_assoc()) { ?>
-                      <li>
+                      <li style="width:20%;">
                         <div style="width:200px; height:auto; border:1px solid #fff; overflow: hidden;">
                           <a href="movie_detail.php?idx=<?=$row['movie_index']?>">
                             <img src="img/movie_poster_<?=$row['movie_index']?>.jpg" style="width:200px; height: auto;">

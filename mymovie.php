@@ -16,6 +16,7 @@
   
   <body>
     <?php
+        ini_set('display_errors','0');
         session_start();
         include_once('dbconn.php'); 
         $id = $_SESSION['id'];
@@ -72,13 +73,13 @@
       <div style="margin:auto; margin-top:100px; text-align:center;">
         <h1 style="color:white; font-size:50px;">마이페이지</h1> 
         <p style="letter-spacing:1px; color:white; font-size:15px; margin-top:30px;">예약 영화 목록</p>     
-        <table id="booked_movie_box">
+        <table id="booked_movie_box" style="margin-top:30px;">
             <?php while($book = $result->fetch_assoc()){ 
                 $book_index = $book['book_index'];
                 $sql = "select * from paid where book_index = '$book_index'";
                 $result2 = $conn->query($sql);
                 $paid = $result2->fetch_assoc();
-                if($paid['paid_index'] > 0){
+                if($paid['paid_index']!=NULL){
                     $movie_index = $book['movie_index'];
                     $showtimes_index = $book['showtimes_index'];
 
@@ -98,14 +99,16 @@
                         <td class="booked_movie_item_4">
                             <?php 
                             $sql = "select * from seat where book_index='$book_index'";
-                            $result2 = $conn->query($sql);
-                            while($seat = $result2->fetch_assoc()){ ?>
+                            $result3 = $conn->query($sql);
+                            while($seat = $result3->fetch_assoc()){ ?>
                                 <div class="booked_movie_item_5"><?=$seat['seatnumber']?></div>
                             <?php } ?>
                         </td>
                     </tr>
                 </tbody>
-                <?php } ?>
+                <?php } else{
+                  continue;
+                } ?>
             <?php }  ?>
         </table>
       </div>

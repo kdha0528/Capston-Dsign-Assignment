@@ -108,9 +108,13 @@
                                                 <p class="th">출연</p>
                                                 <p class="td actor"><?=$row['actors']?></p>
                                             </div>
+                                            <div class="info_list">
+                                                <p class="th">등급</p>
+                                                <p class="td actor"><?=$row['age']?></p>
+                                            </div>
                                         </div>
                                         <!--예매사이트와 연동-->
-                                        <button class="movie_btn"><a href="reservation.php">예매하기</a></button>
+                                        <button class="movie_btn"><a href="reservation.php?movie_index=<?=$idx?>">예매하기</a></button>
                                     </div>
                                 </div>
                                 <div class="movie_info_text" style="width:600px; line-height:25px;">
