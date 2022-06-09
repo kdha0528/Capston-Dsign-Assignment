@@ -146,7 +146,7 @@
                                     <?php if($check) {?>
                                         <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>"></label></td>
                                     <?php } else{ ?>
-                                        <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>" disabled></label></td>
+                                        <td><label><div style="width:40px; height:40px; background-color:#a6a6a6;"></div></label></td>
                                     <?php } ?>
                                 <?php $j++; } ?>
                                 </tr>
