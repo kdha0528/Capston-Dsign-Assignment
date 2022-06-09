@@ -32,6 +32,7 @@
     font-size: 2.2em;
     font-weight: 700;
     color: #fff;
+    margin: 0 auto;
 }
 
 .movie_list_box > .inner {
@@ -75,7 +76,6 @@
     border: 1px solid rgba(255, 255, 255, 0.4);
     box-sizing: border-box;
     margin-top: 2em;
-    width: 100%;
 }
 
 .movie_ticket_box::after {
@@ -87,7 +87,7 @@
 .movie_ticket_box .all_movie {
     float: left;
     display: block;
-    width: 25%;
+    width: 32%;
 }
 
 .movie_ticket_box .all_movie::-webkit-scrollbar {
@@ -226,7 +226,7 @@
     float: left;
     position: relative;
     padding-bottom: 30px;
-    width: 40%;
+    width: 33%;
 }
 
 .movie_ticket_box .movie_time::-webkit-scrollbar {
@@ -253,7 +253,8 @@
 }
 
 .movie_time .movie_tit .tit {
-    font-size: 1.6em;
+    font-size: 2em;
+    letter-spacing: 1px;
     font-weight: 600;
     color: #fff;
     margin-left: 12px;
@@ -277,6 +278,7 @@
 
 .time_wrap .time_wrap_top .tit {
     font-size: 1.4em;
+    letter-spacing: 0.5px;
     font-weight: 600;
     color: #fff;
 }
@@ -313,7 +315,7 @@
 }
 
 .time_wrap .time_list_wrap .time_list {
-    width: calc(20% - 10px);
+    width: calc(25% - 10px);
     margin-right: 10px;
     margin-bottom: 10px;
     display: block;
@@ -362,12 +364,14 @@
     font-size: 1.8em;
     font-weight: 600;
     margin-top: 6px;
+    letter-spacing: 0.5px;
 }
 
 .time_wrap .time_list_wrap .time_list .end {
     font-size: 12px;
     font-weight: 400;
     margin-top: 0;
+    letter-spacing: 0.5px;
 }
 
 .time_wrap .time_list_wrap .time_list .num {
@@ -385,8 +389,8 @@
 }
 
 .movie_info .movie_poster {
-    width: calc(100% - 60px);
-    margin: 30px auto 0 auto;
+    width: calc(100% - 50px);
+    margin: 28px auto 0 auto;
 }
 
 .movie_info .movie_poster::after {
@@ -434,11 +438,11 @@
 }
 
 .movie_info .movie_poster .movie_info_txt .info_box {
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
 
 .movie_info .movie_poster .movie_info_txt .info_box .info_list {
-    margin-bottom: 1.6em;
+    margin-bottom: 1.5em;
 }
 
 .movie_info .movie_poster .movie_info_txt .info_box .info_list:last-child {
@@ -509,7 +513,7 @@
     font-weight: 700;
     cursor: pointer;
     border: none;
-    float: right;
+    float: left;
 }
 
 .check {
@@ -869,4 +873,10 @@
     font-size: 1.6em;
     font-weight: 700;
     cursor: pointer;
+}
+
+#sit_box {
+    height: 850px;
+    overflow-y: auto;
+    display: flex;
 }

@@ -45,6 +45,13 @@
         }
 
         $book_index = $_GET['book_index'];
+
+        $sql = "select booked_index from paid";
+        $result = $conn->query($sql);
+        while($row = fetch->assoc($result)){
+            $book_index = $row['book_index'];
+            $sql = "select seatnumber from seat where book_index = '$book_index']'";
+        }
     ?>
     
     <div id="wrap">
@@ -97,7 +104,7 @@
     <div id="content" class="main_box">
         <link rel="sylesheet" href="./css/sub.css" type="text/css">
         <div class="ticketing_box bg_box" style="bottom: 0;max-height: calc(100vh - 150px);overflow: auto;">
-            <div class="inner">
+            <div class="inner" style="width:80%; margin:0 auto;">
                 <p class="box_tit">예매하기</p>
                 <?php
                     if(!isset($_SESSION['name'])){
@@ -106,8 +113,8 @@
                     }
                 ?>
                 <div class="movie_ticket_box">
-                    <div id="sit_box" style="height:550px;overflow-y:auto; display: block">
-                        <div style="position: absolute; left: 50%; top: 17%; transform: translateX(-50%); background-color: #606060; width: 90%;">
+                    <div id="sit_box">
+                        <div style="position: absolute; left: 50%; top: 17%; transform: translateX(-50%); background-color: #606060; width: 80%;">
                             <table style="border-spacing: 10px">
                                 <tr>
                                     <td><p style="color: white; font-size: 20px;">인원</p></td>
@@ -123,60 +130,33 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="screen_box" style="width: 350px; height: 30px; background-color: #606060; position: absolute; left: 21%; top: 35%;">
+                        <div class="screen_box" style="width: 650px; height: 30px; background-color: #606060; position: absolute; left: 30.3%; top: 35%;">
                             <p style="color: white; font-size: 20px; font-weight: 800; text-align: center;">SCREEN</p>
-                        </div>
-                        <form action="seat_selection_proc.php?book_index=<?=$book_index?>" method="post">
-                            <table style="height: 100px; width: 400px; position: absolute; left: 30%; top: 50%; transform: translateX(-50%); border-spacing: 5px;">
+                        </div>                        
+                        <form action="seat_selection_proc.php?book_index=<?=$book_index?>" method="post" style="position: absolute; left:47.2%; top: 50%; ">
+                            <table style="height: 100px; width: 400px; transform: translateX(-50%); border-spacing: 5px;">
+                            <?php
+                            $i = 1;
+                            $j = 1;
+                            while($i != 10){ $j=1;?>
                                 <tr>
-                                    <td><p style="color: white; font-size: 15px">1열</p></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-1"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-2"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-3"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-4"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-5"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-6"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-7"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="1-8"></label></td>
+                                    <td><p style="color: white; font-size: 15px; width:30px; letter-spacing:1px;"><?=$i?>열</p></td>
+                                <?php while($j !=15){ ?>
+                                    <?php  
+                                    $sql = "select * from movie where movie_index = '$movie_index'";
+                                    $result = $conn->query($sql);
+                                    $row = $result->fetch_assoc();
+                                    ?>
+                                    <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>"></label></td>
+                                <?php $j++; } ?>
                                 </tr>
-                                <tr>
-                                    <td><p style="color: white; font-size: 15px">2열</p></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-1"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-2"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-3"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-4"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-5"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-6"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-7"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="2-8"></label></td>
-                                </tr>
-                                <tr>
-                                    <td><p style="color: white; font-size: 15px">3열</p></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-1"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-2"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-3"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-4"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-5"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-6"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-7"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="3-8"></label></td>
-                                </tr>
-                                <tr>
-                                    <td><p style="color: white; font-size: 15px">4열</p></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-1"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-2"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-3"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-4"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-5"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-6"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-7"></label></td>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="4-8"></label></td>
-                                </tr>
-                            </table>
-                        
-                            <a href="reservation.php" class="btn2" style="position: absolute; right: 300px; top: 80%; " >돌아가기</a>                                
-                            <input type="submit" value="예매하기" class="btn2" style="position: absolute; right: 90px; top: 80%; " >
-                        </form>
+                            <?php $i++; }  ?>
+                            </table>         
+                            <div style="display:flex; flex-direction:row; width:500px; justify-content:space-around; position: absolute; top: 106%; left:-34.2%;">               
+                                <a href="reservation.php" class="btn2" >돌아가기</a>                                
+                                <input type="submit" value="예매하기" class="btn2">
+                            </div>
+                        </form>                        
                     </div>
                 </div>
             </div>

@@ -140,7 +140,7 @@
     <div id="content" class="main_box">
         <link rel="sylesheet" href="./css/sub.css" type="text/css">
         <div class="ticketing_box bg_box" style="bottom: 0;max-height: calc(100vh - 150px);overflow: auto;">
-            <div class="inner">
+            <div class="inner" style="width:80%; margin:0 auto;">
                 <p class="box_tit">예매하기</p>
                 <div class="movie_ticket_box">
                     <div id="ticket_box">
@@ -186,7 +186,7 @@
                                         <div class="time_wrap_top">
                                             <p class="tit">2D 디지털 자막</p>
                                         </div>
-                                        <div class="time_list_wrap">
+                                        <div class="time_list_wrap" style="margin-bottom:20px;">
                                             <?php if($showtimes_index == $row3['showtimes_index']) { ?>
                                             <div class="time_list" style = "background-color: #f9880a">
                                             <?php } else { ?>
