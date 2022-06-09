@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/leftMenu.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/sub.css">
+    <link rel="stylesheet" href="css/slide.css">
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
@@ -116,43 +117,43 @@
     <div id="content" class="main_box">
         <link rel="sylesheet" href="./css/sub.css" type="text/css">
         <div class="ticketing_box bg_box" style="bottom: 0;max-height: calc(100vh - 150px);overflow: auto;">
-            <div class="inner">
+            <div class="inner" style = "width:80%; margin:0 auto;">
                 <p class="box_tit">결제하기</p>
                 <div class="movie_ticket_box">
                     <div id="ticket_box">
-                        <div id="rsMovie" class="all_movie" style="height:550px;overflow-y:auto">
+                        <div id="rsMovie" class="all_movie" style="height:550px;overflow-y:auto;">
                             <div class="all_movie_tit">
                                 <p class="tit">
                                     <span id="movieTotalCount"><?=$id?>님</span>
                                 </p>
                             </div>
                             <div id="movieTotalList" class="movie_list_wrap">                                               
-                                    <div class="movie_list">                  
+                                <div class="movie_list">                  
+                                    <label  class="movie_title_label live" >
+                                        <p class="movie_title" style="font-size:large"></p>
+                                    </label>                               
+                                    <label  class="movie_title_label live" >
+                                        <p class="movie_title" style="font-size:xx-large"><?=$movie['title']?></p>
+                                    </label>               
+                                    <label  class="movie_title_label live" >
+                                        <p class="movie_title" style="font-size:x-large"><?=$showtimes['starttime']?>~<?=$showtimes['finishtime']?></p>
+                                    </label>    
+                                    <label  class="movie_title_label live" >
+                                        <p class="movie_title" style="font-size:large"></p>
+                                    </label>           
+                                    <label  class="movie_title_label live" >
+                                        <p class="movie_title" style="font-size:large">예약좌석</p>
+                                    </label>   
+                                    <?php while($seat = $result->fetch_assoc()) { ?>
                                         <label  class="movie_title_label live" >
-                                            <p class="movie_title" style="font-size:large"></p>
-                                        </label>                               
-                                        <label  class="movie_title_label live" >
-                                            <p class="movie_title" style="font-size:xx-large"><?=$movie['title']?></p>
-                                        </label>               
-                                        <label  class="movie_title_label live" >
-                                            <p class="movie_title" style="font-size:x-large"><?=$showtimes['starttime']?>~<?=$showtimes['finishtime']?></p>
-                                        </label>    
-                                        <label  class="movie_title_label live" >
-                                            <p class="movie_title" style="font-size:large"></p>
-                                        </label>           
-                                        <label  class="movie_title_label live" >
-                                            <p class="movie_title" style="font-size:large">예약좌석</p>
-                                        </label>   
-                                        <?php while($seat = $result->fetch_assoc()) { ?>
-                                            <label  class="movie_title_label live" >
-                                                <p class="movie_title" style="font-size:large"><?=$seat['seatnumber']?></p>                                           
-                                            </label>                                              
-                                        <?php $cnt++; } ?>
-                                    </div>
+                                            <p class="movie_title" style="font-size:large"><?=$seat['seatnumber']?></p>                                           
+                                        </label>                                              
+                                    <?php $cnt++; } ?>
+                                </div>
                             </div> 
                         </div>
-                        <div id="rsvInfo" class="movie_info" data-mid>
-                            <div class="movie_poster" >  
+                        <div id="rsvInfo" class="movie_info" style="height:550px;overflow-y:auto; border-left: 1px solid rgba(255, 255, 255, 0.4); box-sizing: border-box;">
+                            <div class="movie_poster_box" style="">  
                                 <div class="movie_poster" >
                                     <div class="poster">
                                         <div class="img">
@@ -167,21 +168,17 @@
                                     </div>
                                     <div class="info_box">
                                         <div class="info_list">
-                                            <p class="th">상영</p>
-                                            <p class="td" id="reserveInfoTicket">-</p>
-                                            <p class="th" id="thno">&ensp;MomentCinema <?=$movie['movie_index']?>관</p>
+                                            <p class="th">상영&ensp;-&ensp;MomentCinema <?=$movie['movie_index']?>관</p>
                                         </div>
                                         <div class="info_list">
-                                            <p class="th">시간</p>
-                                            <p class="td" id="reserveInfoTicket">-</p>
-                                            <p class="th" id="mtime">&ensp;<?=$showtimes['starttime']?>~<?=$showtimes['finishtime']?></p>  
+                                            <p class="th">시간&ensp;-&ensp;<?=$showtimes['starttime']?>~<?=$showtimes['finishtime']?></p>  
                                         </div>
                                     </div>
                                 </div>
                             </div>   
                         </div>
                         <!--결제 하기-->
-                        <div id="rsvSchedule" class="movie_time" style="height:550px;overflow-y:auto">
+                        <div id="rsvSchedule" class="movie_time" style="height:550px;overflow-y:auto;">
                             <div id="scheduleList">
                                 <div class="movie_poster">                                  
                                     <div class="movie_info_txt" style="margin : 50px;">
@@ -211,8 +208,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div> 
                     </div>
                 </div>
             </div>

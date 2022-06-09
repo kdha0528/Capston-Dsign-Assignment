@@ -44,14 +44,9 @@
             $id = $_SESSION['id'];
         }
 
-        $book_index = $_GET['book_index'];
-
-        $sql = "select booked_index from paid";
-        $result = $conn->query($sql);
-        while($row = fetch->assoc($result)){
-            $book_index = $row['book_index'];
-            $sql = "select seatnumber from seat where book_index = '$book_index']'";
-        }
+        $book_index = $_GET['book_index'];  
+        $showtimes_index = $_GET['showtimes_index']; 
+        
     ?>
     
     <div id="wrap">
@@ -141,13 +136,18 @@
                             while($i != 10){ $j=1;?>
                                 <tr>
                                     <td><p style="color: white; font-size: 15px; width:30px; letter-spacing:1px;"><?=$i?>열</p></td>
-                                <?php while($j !=15){ ?>
-                                    <?php  
-                                    $sql = "select * from movie where movie_index = '$movie_index'";
-                                    $result = $conn->query($sql);
-                                    $row = $result->fetch_assoc();
-                                    ?>
-                                    <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>"></label></td>
+                                <?php while($j !=15){ $check = true; ?>
+                                    <?php
+                                        $sql = "SELECT seat.seatnumber FROM seat INNER JOIN paid INNER JOIN book ON paid.book_index = book.book_index WHERE  book.showtimes_index = '$showtimes_index' AND seat.book_index = paid.book_index";
+                                        $result = $conn->query($sql);  
+                                        while($seat = $result->fetch_assoc()){
+                                                if($seat['seatnumber'] == "$i-$j") $check = false;
+                                            } ?>
+                                    <?php if($check) {?>
+                                        <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>"></label></td>
+                                    <?php } else{ ?>
+                                        <td><label><input type="checkbox" class="check" name="sit[]" value="<?=$i?>-<?=$j?>" disabled></label></td>
+                                    <?php } ?>
                                 <?php $j++; } ?>
                                 </tr>
                             <?php $i++; }  ?>

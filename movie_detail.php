@@ -81,49 +81,54 @@
                         <div class="inner">
                             <p class="movie_tit">영화정보</p>
                             <div class="movie_info">
-                                <div class="movie_poster">
-                                    <div class="poster"><div id="poster_image" class="img">
-                                        <!---포스터 이미지 주소-->
-                                        <img src="img/movie_poster_<?=$idx?>.jpg" >
-                                    </div></div>
-                                    <div class="movie_info_txt">
-                                        <p class="tit"><?=$row['title']?></p>
-                                        <p class="eng_tit"><?=$row['english_title']?></p>
-                                        <p class="eng_tit"></p>
+                                <div class="movie_poster_box" style="position:static; left:0; width: calc(100% - 50px); margin: 28px auto 0 auto;">
+                                    <div class="movie_poster">
+                                        <div class="poster">
+                                            <div id="poster_image" class="img">
+                                                <!---포스터 이미지 주소-->
+                                                <img src="img/movie_poster_<?=$idx?>.jpg" >
+                                            </div>
+                                        </div>                                    
+                                        <div class="movie_info_txt">
+                                            <p class="tit"><?=$row['title']?></p>
+                                            <p class="eng_tit"><?=$row['english_title']?></p>
+                                            <p class="eng_tit"></p>
 
-                                        <div class="info_box">
-                                            <div class="info_list">
-                                                <p class="th">장르</p>
-                                                <p class="td info">
-                                                    <span><?=$row['ganre']?></span>
-                                                    <span>개봉일 : <?=$row['opendate']?></span>
-                                                    <span><?=$row['runningtime']?>분</span>
-                                                </p>
+                                            <div class="info_box">
+                                                <div class="info_list">
+                                                    <p class="th">장르</p>
+                                                    <p class="td info">
+                                                        <span><?=$row['ganre']?></span>
+                                                        <span>개봉일 : <?=$row['opendate']?></span>
+                                                        <span><?=$row['runningtime']?>분</span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_list">
+                                                    <p class="th">감독</p>
+                                                    <p class="td director"><?=$row['director']?></p>
+                                                </div>
+                                                <div class="info_list">
+                                                    <p class="th">출연</p>
+                                                    <p class="td actor"><?=$row['actors']?></p>
+                                                </div>
+                                                <div class="info_list">
+                                                    <p class="th">등급</p>
+                                                    <p class="td actor"><?=$row['age']?></p>
+                                                </div>
                                             </div>
-                                            <div class="info_list">
-                                                <p class="th">감독</p>
-                                                <p class="td director"><?=$row['director']?></p>
-                                            </div>
-                                            <div class="info_list">
-                                                <p class="th">출연</p>
-                                                <p class="td actor"><?=$row['actors']?></p>
-                                            </div>
-                                            <div class="info_list">
-                                                <p class="th">등급</p>
-                                                <p class="td actor"><?=$row['age']?></p>
-                                            </div>
+                                              <!--예매사이트와 연동-->
+                                              <button class="movie_btn"><a href="reservation.php?movie_index=<?=$idx?>">예매하기</a></button>
+                                          </div>
                                         </div>
-                                        <!--예매사이트와 연동-->
-                                        <button class="movie_btn"><a href="reservation.php?movie_index=<?=$idx?>">예매하기</a></button>
                                     </div>
-                                </div>
-                                <div class="movie_info_text" style="width:600px; line-height:25px;">
-                                    <div class="con">
-                                        <p>
-                                            <span style="color: rgb(85, 85, 85); ">
-                                               <?=$row['description']?>
-                                            </span>
-                                        </p>
+                                    <div class="movie_info_text" style="width:600px; line-height:25px;">
+                                        <div class="con">
+                                            <p>
+                                                <span style="color: rgb(85, 85, 85); ">
+                                                  <?=$row['description']?>
+                                                </span>
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

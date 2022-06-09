@@ -206,31 +206,29 @@
                             </div>
                         </div>
                         <div id="rsvInfo" class="movie_info" data-mid>
-                            <div class="movie_poster">  
+                            <div class="movie_poster_box" style="left:25%;">  
                                 <div class="movie_poster">
-                                    <div class="poster">
+                                    <div class="poster" style="width:210px;">
                                         <div class="img">
                                             <img src="img/res_post_default.gif" alt title="-" id="MIMG">
                                         </div>
                                     </div>
-                                </div>    
+                                </div>                                      
                                 <div class="movie_info_txt">
                                     <div class="movie name">
                                         <p class="tit">제목</p>
                                         <p id="TIT" style="color: white; font-size: 15PX;"></p>
                                     </div>
+                                    <?php if($movie_index != 0 && $showtimes_index != 0) { ?>
                                     <div class="info_box">
                                         <div class="info_list">
-                                            <p class="th">상영</p>
-                                            <p class="td" id="reserveInfoTicket">-</p>
-                                            <p class="th" id="thno"></p>
+                                            <p class="th">상영&ensp;-&ensp;MomentCinema <?=$row2['movie_index']?>관</p>
                                         </div>
                                         <div class="info_list">
-                                            <p class="th">시간</p>
-                                            <p class="td" id="reserveInfoTicket">-</p>
-                                            <p class="th" id="mtime"></p>  
+                                            <p class="th">시간&ensp;-&ensp;<?=$row4['starttime']?>~<?=$row4['finishtime']?></p>  
                                         </div>
                                     </div>
+                                    <?php } ?>
                                 </div>
                                 <?php if($movie_index != 0 && $showtimes_index != 0) { ?>                                                                        
                                 <div class="total_box">

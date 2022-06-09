@@ -24,7 +24,7 @@ if($conn->query($sql)){
     $result = $conn->query($sql2);
     $row = $result->fetch_assoc();
     $book_index = $row['book_index'];
-    echo "<script>location.href='seat_selection.php?book_index=$book_index'</script>";
+    echo "<script>location.href='seat_selection.php?book_index=$book_index&showtimes_index=$showtimes_index'</script>";
 }else{
     echo "<script type='text/javascript'>alert('오류가 발생하였습니다.$conn->error');</script>";
     echo "<script>location.href='MomentCinema.php'</script>";
