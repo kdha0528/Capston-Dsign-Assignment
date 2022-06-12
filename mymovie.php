@@ -73,7 +73,8 @@
       <div style="margin:auto; margin-top:100px; text-align:center;">
         <h1 style="color:white; font-size:50px;">마이페이지</h1> 
         <p style="letter-spacing:1px; color:white; font-size:15px; margin-top:30px;">예약 영화 목록</p>     
-        <table id="booked_movie_box" style="margin-top:30px;">
+        <table id="booked_movie_box" style="margin:50px auto 0 auto; ">
+          <tbody style="height:100%;">
             <?php while($book = $result->fetch_assoc()){ 
                 $book_index = $book['book_index'];
                 $sql = "select * from paid where book_index = '$book_index'";
@@ -91,7 +92,7 @@
                     $result2 = $conn->query($sql);
                     $showtimes = $result2->fetch_assoc();
                     
-                ?><tbody class="booked_movie_tbody">
+                ?>
                     <tr class="booked_movie_item">
                         <td class="booked_movie_item_1"><a href="movie_detail.php?idx=<?=$movie['movie_index']?>"><img src="img/movie_poster_<?=$movie['movie_index']?>.jpg" style="width:100px; height: auto;"></a></td>
                         <td class="booked_movie_item_2"><a href="movie_detail.php?idx=<?=$movie['movie_index']?>"><?=$movie['title']?></a></td>
@@ -105,11 +106,11 @@
                             <?php } ?>
                         </td>
                     </tr>
-                </tbody>
                 <?php } else{
                   continue;
                 } ?>
             <?php }  ?>
+            </tbody>
         </table>
       </div>
     </div>

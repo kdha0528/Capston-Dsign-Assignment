@@ -785,21 +785,21 @@
 #booked_movie_box {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-}
-
-.booked_movie_tbody {
     width: 70%;
-    padding: 20px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .booked_movie_item {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .booked_movie_item_1 {

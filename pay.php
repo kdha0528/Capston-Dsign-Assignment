@@ -183,26 +183,26 @@
                                 <div class="movie_poster">                                  
                                     <div class="movie_info_txt" style="margin : 50px;">
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 45PX;">인원 : <?=$cnt?>명</p>
+                                            <p style="color: white; font-size: 40px;">인원 : <?=$cnt?>명</p>
                                         </div>
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 30PX;">&nbsp;</p>
+                                            <p style="color: white; font-size: 30px;">&nbsp;</p>
                                         </div>
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 45PX;">티켓 : 15000원</p>
+                                            <p style="color: white; font-size: 40px;">티켓 : 15000원</p>
                                         </div>
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 30PX;">&nbsp;</p>
+                                            <p style="color: white; font-size: 30px;">&nbsp;</p>
                                         </div>
                                         <hr style = "color:white; size:10px;">
                                         <?php $total = 15000*$cnt;?>
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 30PX;">&nbsp;</p>
+                                            <p style="color: white; font-size: 30px;">&nbsp;</p>
                                         </div>
                                         <div class="movie name">
-                                            <p style="color: white; font-size: 45PX;">합계 : <?=$total?>원</p>
+                                            <p style="color: white; font-size: 40px;">합계 : <?=$total?>원</p>
                                         </div>
-                                        <div class="btn22">
+                                        <div class="btn22" style="margin-top:50px; font-size:2.2em; letter-spacing:1px;">
                                             <a href="pay_proc.php?total=<?=$total?>&book_index=<?=$book['book_index']?>">결제하기</a>
                                         </div>
                                     </div>

@@ -74,15 +74,17 @@
     <div id="content" class="main_box">
       <div style="margin:auto; margin-top:100px; text-align:center;">
         <h1 style="color:white; font-size:50px;">마이페이지</h1>      
-        <p style="color:white; font-size:20px; margin-top:30px;"><?=$id?>님의 포인트 : <?=$row['point']?>P</p>
-        <div class="btn22" style="margin-top:50px;">
-          <a href="mymovie.php" style="font-size:20px;">예약 영화 확인</a>
-        </div>
-        <div class="btn22"style="margin-top:50px;">
-          <a href="edit_myinfo.php" style="font-size:20px;">개인정보 수정</a>
-        </div>
-        <div class="btn22"style="margin-top:50px;">
-          <a href="charge.php" style="font-size:20px;">포인트 충전</a>
+        <p style="color:white; font-size:28px; margin-top:50px;"><?=$id?>님의&nbsp; 포인트 &nbsp; : &nbsp; <?=$row['point']?>P</p>
+        <div style="width:60%; display:flex; flex-column:row; justify-content:space-around; margin:80px auto 0 auto;">
+          <div class="btn22" style="width:220px; height:75px; line-height:75px;">
+            <a href="mymovie.php" style="font-size:28px;">예약 영화 확인</a>
+          </div>
+          <div class="btn22"style="width:220px; height:75px; line-height:75px;">
+            <a href="edit_myinfo.php" style="font-size:28px;">개인정보 수정</a>
+          </div>
+          <div class="btn22"style="width:220px; height:75px; line-height:75px;">
+            <a href="charge.php" style="font-size:28px;">포인트 충전</a>
+          </div>
         </div>
       </div>
     </div>
