@@ -144,6 +144,18 @@ input[type='date']:after {
     overflow-y: scroll;
 }
 
+.layout_box::-webkit-scrollbar {
+    width: 7px;
+}
+
+.layout_box::-webkit-scrollbar-thumb {
+    background-color: #4b4b4c;
+}
+
+.layout_box::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .layout_box .inner {
     padding: 6em;
 }

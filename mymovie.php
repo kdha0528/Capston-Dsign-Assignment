@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div id="content" class="main_box" style="overflow-y:scroll;">
+    <div id="content" class="main_box" style="overflow-y:hidden;">
       <div style="margin:auto; margin-top:100px; text-align:center;">
         <h1 style="color:white; font-size:50px;">마이페이지</h1> 
         <p style="letter-spacing:1px; color:white; font-size:15px; margin-top:30px;">예약 영화 목록</p>     
